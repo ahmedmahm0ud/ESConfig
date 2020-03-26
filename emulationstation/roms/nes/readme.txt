@@ -1,4 +1,4 @@
-Place your Nintendo Entertainment Systems here
+Place your Nintendo Entertainment System ROM's here
 
 Emulator: nestopia_libretro
 
