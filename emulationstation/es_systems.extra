@@ -1,0 +1,59 @@
+	
+
+	<system>
+		<name>neogeocd</name>
+		<fullname>Neo Geo CD</fullname>
+		<path>~/.emulationstation/roms/neogeocd/</path>
+		<extension>.zip .7z .cue</extension>
+		<command>retroarch -f -L ~/.config/retroarch/cores/fbneo_libretro.so --subsystem neocd %ROM%</command>
+		<platform>neogeocd</platform>
+		<theme>neogeocd</theme>
+		<!-- The BIOS files are often found named something else, It must be renamed when placed in the BIOS folder. lr-fbneo has support for the Neo Geo CD system but you will also need the corresponding BIOS from the MAME romset. Prefer to use the UNIVERSE BIOS/UNIBIOS - an advanced Neo Geo bios that allows region selection, cheats, dip-switch control, and more.
+		
+		Samples should be put under SYSTEM_DIRECTORY/fbneo/samples.
+		hiscore.dat should be put under SYSTEM_DIRECTORY/fbneo/.
+		Place your BIOS files in "~/.config/retroarch/system/fbneo/".
+
+		File 				Description									md5sum 				
+		fbneo/neogeo.zip 	Neo Geo BIOS								1aea796848f54df32a09def490248680					 
+		fbneo/neocdz.zip	Neo Geo CDZ System BIOS	 					a7cca75f3d5af6acc85efcce589ab04f		
+		fbneo/decocass.zip 	DECO Cassette System BIOS 					2b268f2f8960e5124f9a8cc6cfe86773
+		fbneo/isgsm.zip 	ISG Selection Master Type 2006 System BIOS 	4a56d56e2219c5e2b006b66a4263c01c
+		fbneo/midssio.zip 	Midway SSIO Sound Board Internal ROM 		5904b0de768d1d506e766aa7e18994c1
+		fbneo/nmk004.zip 	NMK004 Internal ROM 						bfacf1a68792d5348f93cf724d2f1dda
+		fbneo/pgm.zip 		PGM System BIOS 							87cc944eef4c671aa2629a8ba48a08e0
+		fbneo/skns.zip 		Super Kaneko Nova System BIOS 				3f956c4e7008804cb47cbde49bd5b908
+		fbneo/ym2608.zip 	YM2608 Internal ROM 						79ae0d2bb1901b7e606b6dc339b79a97
+		fbneo/cchip.zip 	C-Chip Internal ROM 						df6f8a3d83c028a5cb9f2f2be60773f3 	-->
+	</system>
+
+	<system>
+		<name>neogeocd</name>
+		<fullname>Neo Geo CD</fullname>
+		<path>~/.emulationstation/roms/neogeocd/</path>
+		<extension>.cue .chd</extension>
+		<command>retroarch -f -L ~/.config/retroarch/cores/neocd_libretro.so %ROM%</command>
+		<platform>neogeocd</platform>
+		<theme>neogeocd</theme>
+		<!-- To function NeoCD need a BIOS from a Front Loading, Top Loading or CDZ machine. The BIOS files should be installed in a neocd folder under RetroArch's system folder.
+		Place your BIOS files in "~/.config/retroarch/system/neocd/".
+
+		Need one in the following table
+
+		Filename 				Description 				SHA1SUM
+		neocd/ng-lo.rom 		Y Zoom ROM 					2b1c719531dac9bb503f22644e6e4236b91e7cfc
+		neocd/000-lo.lo 		Y Zoom ROM (MAME) 			5992277debadeb64d1c1c64b0a92d9293eaf7e4a
+
+		You need at least one in the following table. If several BIOSes are available, it will be possible to choose which to run in the Core Options Menu. The files will be automatically byte swapped if needed.
+
+		neocd/neocd_f.rom 		Front Loader BIOS 			a5f4a7a627b3083c979f6ebe1fabc5d2df6d083b
+		neocd/neocd_sf.rom 		Front Loader BIOS (SMKDAN)	c99c44a43bded1bff4570b30b74975601bd3f94e
+		neocd/neocd_t.rom 		Top Loader BIOS 			cc92b54a18a8bff6e595aabe8e5c360ba9e62eb5
+		neocd/neocd_st.rom 		Top Loader BIOS (SMKDAN) 	d463b3a322b9674f9e227a21e43898019ce0e642
+		neocd/neocd_z.rom 		CDZ BIOS 					b0f1c4fa8d4492a04431805f6537138b842b549f
+		neocd/neocd_sz.rom 		CDZ BIOS (SMKDAN) 			41ca1c031b844a46387be783ac862c76e65afbb3
+		neocd/front-sp1.bin 	Front Loader BIOS (MAME) 	53bc1f283cdf00fa2efbb79f2e36d4c8038d743a
+		neocd/top-sp1.bin 		Top Loader BIOS (MAME) 		235f4d1d74364415910f73c10ae5482d90b4274f
+		neocd/neocd.bin 		CDZ BIOS (MAME) 			7bb26d1e5d1e930515219cb18bcde5b7b23e2eda
+		neocd/uni-bioscd.rom 	Universe 3.2 				5158b728e62b391fb69493743dcf7abbc62abc82 	-->
+	</system>
