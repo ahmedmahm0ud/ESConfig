@@ -1,4 +1,4 @@
-	
+<?xml version="1.0"?>	
 
 	<system>
 		<name>neogeocd</name>
@@ -56,4 +56,49 @@
 		neocd/top-sp1.bin 		Top Loader BIOS (MAME) 		235f4d1d74364415910f73c10ae5482d90b4274f
 		neocd/neocd.bin 		CDZ BIOS (MAME) 			7bb26d1e5d1e930515219cb18bcde5b7b23e2eda
 		neocd/uni-bioscd.rom 	Universe 3.2 				5158b728e62b391fb69493743dcf7abbc62abc82 	-->
+	</system>
+
+	<system>
+		<name>nes</name>
+		<fullname>Nintendo Entertainment System</fullname>
+		<path>~/.emulationstation/roms/nes/</path>
+		<extension>.zip .nes .smc .sfc .fig .swc .mgd</extension>
+		<command>retroarch -f -L ~/.config/retroarch/cores/nestopia_libretro.so %ROM%</command>
+		<platform>nes</platform>
+		<theme>nes</theme>
+		<!-- FDS games require the disksys.rom bios file. Place the BIOS in: ~/.config/retroarch/system/ .
+		It is HIGHLY RECOMMENDED you have NstDatabase.xml in RetroArch's system directory, you can get it from https://github.com/libretro/nestopia
+		To use custom color palettes in the Nestopia UE core, the custom color palette file you want to use must be in RetroArch's system directory ~/.config/retroarch/system/ . Make sure the custom palette file is named 'custom.pal' .
+
+		Filename 			Description 									md5sum 								CRC32
+		disksys.rom 		Family Computer Disk System BIOS - Required 	ca30b50f880eb660a320674ed365ef7a 	5e607dcf
+		NstDatabase.xml 	Nestopia UE Database file - Required 	-->
+	</system>
+
+	<system>
+		<name>nes</name>
+		<fullname>Nintendo Entertainment System</fullname>
+		<path>~/.emulationstation/roms/nes/</path>
+		<extension>.zip .nes .smc .sfc .fig .swc .mgd</extension>
+		<command>retroarch -f -L ~/.config/retroarch/cores/mesen_libretro.so %ROM%</command>
+		<platform>nes</platform>
+		<theme>nes</theme>
+		<!-- FDS games require the disksys.rom bios file. Place the BIOS in: ~/.config/retroarch/system/ .
+		
+		To use custom color palettes in the Mesen core, the 'Palette' core option must be set to Custom and the custom color palette file you want to use must be in RetroArch's system directory.
+		Make sure the custom palette file is named 'MesenPalette.pal'
+		Custom color palettes for the NES can be generated with either of these tools.
+		Bisqwit's NTSC NES palette generator : https://bisqwit.iki.fi/utils/nespalette.php
+		Drag's NTSC NES palette generator : http://drag.wootest.net/misc/palgen.html
+
+		To use HD packs, first make sure to turn on the Enable HD Packs core option
+		First, create a folder named 'HdPacks' in RetroArch's System directory.
+		Next, create a folder inside the HdPacks directory that has the same name as the content you're going to load.
+		So, if the content you're loading is Mega Man (USA).nes, the folder should be named 'Mega Man (USA)'.
+		Finally, extract the HD pack content files to the Mega Man (USA) folder.
+
+		Filename 			Description 									md5sum 								CRC32
+		disksys.rom 		Family Computer Disk System BIOS - Required 	ca30b50f880eb660a320674ed365ef7a 	5e607dcf
+		MesenPalette.pal 	Custom color palette
+		HdPacks/* 			HD Pack directory 	-->
 	</system>
