@@ -1,13 +1,10 @@
 <?xml version="1.0"?>	
 
-	<system>
-		<name>neogeocd</name>
-		<fullname>Neo Geo CD</fullname>
-		<path>~/.emulationstation/roms/neogeocd/</path>
-		<extension>.zip .7z .cue</extension>
-		<command>retroarch -f -L ~/.config/retroarch/cores/fbneo_libretro.so --subsystem neocd %ROM%</command>
-		<platform>neogeocd</platform>
-		<theme>neogeocd</theme>
+	
+	<name> 		fbneo_libretro
+	<extension> .zip .7z .cue
+	<command> 	retroarch -f -L ~/.config/retroarch/cores/fbneo_libretro.so --subsystem neocd %ROM%
+		
 		<!-- The BIOS files are often found named something else, It must be renamed when placed in the BIOS folder. lr-fbneo has support for the Neo Geo CD system but you will also need the corresponding BIOS from the MAME romset. Prefer to use the UNIVERSE BIOS/UNIBIOS - an advanced Neo Geo bios that allows region selection, cheats, dip-switch control, and more.
 		
 		Samples should be put under SYSTEM_DIRECTORY/fbneo/samples.
@@ -25,16 +22,11 @@
 		fbneo/skns.zip 		Super Kaneko Nova System BIOS 				3f956c4e7008804cb47cbde49bd5b908
 		fbneo/ym2608.zip 	YM2608 Internal ROM 						79ae0d2bb1901b7e606b6dc339b79a97
 		fbneo/cchip.zip 	C-Chip Internal ROM 						df6f8a3d83c028a5cb9f2f2be60773f3 	-->
-	</system>
 
-	<system>
-		<name>neogeocd</name>
-		<fullname>Neo Geo CD</fullname>
-		<path>~/.emulationstation/roms/neogeocd/</path>
-		<extension>.cue .chd</extension>
-		<command>retroarch -f -L ~/.config/retroarch/cores/neocd_libretro.so %ROM%</command>
-		<platform>neogeocd</platform>
-		<theme>neogeocd</theme>
+	<name> 		neocd_libretro
+	<extension> .cue .chd
+	<command> 	retroarch -f -L ~/.config/retroarch/cores/neocd_libretro.so %ROM%
+
 		<!-- To function NeoCD need a BIOS from a Front Loading, Top Loading or CDZ machine. The BIOS files should be installed in a neocd folder under RetroArch's system folder.
 		Place your BIOS files in "~/.config/retroarch/system/neocd/".
 
@@ -56,16 +48,11 @@
 		neocd/top-sp1.bin 		Top Loader BIOS (MAME) 		235f4d1d74364415910f73c10ae5482d90b4274f
 		neocd/neocd.bin 		CDZ BIOS (MAME) 			7bb26d1e5d1e930515219cb18bcde5b7b23e2eda
 		neocd/uni-bioscd.rom 	Universe 3.2 				5158b728e62b391fb69493743dcf7abbc62abc82 	-->
-	</system>
 
-	<system>
-		<name>nes</name>
-		<fullname>Nintendo Entertainment System</fullname>
-		<path>~/.emulationstation/roms/nes/</path>
-		<extension>.zip .nes .smc .sfc .fig .swc .mgd</extension>
-		<command>retroarch -f -L ~/.config/retroarch/cores/nestopia_libretro.so %ROM%</command>
-		<platform>nes</platform>
-		<theme>nes</theme>
+	<name> 		nestopia_libretro
+	<extension> .zip .nes .smc .sfc .fig .swc .mgd
+	<command> 	retroarch -f -L ~/.config/retroarch/cores/nestopia_libretro.so %ROM%
+
 		<!-- FDS games require the disksys.rom bios file. Place the BIOS in: ~/.config/retroarch/system/ .
 		It is HIGHLY RECOMMENDED you have NstDatabase.xml in RetroArch's system directory, you can get it from https://github.com/libretro/nestopia
 		To use custom color palettes in the Nestopia UE core, the custom color palette file you want to use must be in RetroArch's system directory ~/.config/retroarch/system/ . Make sure the custom palette file is named 'custom.pal' .
@@ -73,16 +60,11 @@
 		Filename 			Description 									md5sum 								CRC32
 		disksys.rom 		Family Computer Disk System BIOS - Required 	ca30b50f880eb660a320674ed365ef7a 	5e607dcf
 		NstDatabase.xml 	Nestopia UE Database file - Required 	-->
-	</system>
 
-	<system>
-		<name>nes</name>
-		<fullname>Nintendo Entertainment System</fullname>
-		<path>~/.emulationstation/roms/nes/</path>
-		<extension>.zip .nes .smc .sfc .fig .swc .mgd</extension>
-		<command>retroarch -f -L ~/.config/retroarch/cores/mesen_libretro.so %ROM%</command>
-		<platform>nes</platform>
-		<theme>nes</theme>
+	<name> 		mesen_libretro
+	<extension> .zip .nes .smc .sfc .fig .swc .mgd
+ 	<command> 	retroarch -f -L ~/.config/retroarch/cores/mesen_libretro.so %ROM%
+
 		<!-- FDS games require the disksys.rom bios file. Place the BIOS in: ~/.config/retroarch/system/ .
 		
 		To use custom color palettes in the Mesen core, the 'Palette' core option must be set to Custom and the custom color palette file you want to use must be in RetroArch's system directory.
@@ -101,4 +83,53 @@
 		disksys.rom 		Family Computer Disk System BIOS - Required 	ca30b50f880eb660a320674ed365ef7a 	5e607dcf
 		MesenPalette.pal 	Custom color palette
 		HdPacks/* 			HD Pack directory 	-->
-	</system>
+
+	<name> 		snes9x_libretro
+	<extension> .7z .bin .bs .fig .mgd .sfc .smc .swc .st .zip
+	<command> 	retroarch -f -L ~/.config/retroarch/cores/snes9x_libretro.so %ROM%
+
+		<!-- Satellaview and Sufami Turbo games are properly emulated by lr-snes9x, but require a BIOS to do so.
+		English - No DRM is the recommended version to use.
+
+		Recognized Name Description 			Comment 	CRC32 		MD5SUM
+		BS-X.bin 		English - No DRM 		Required	E5A91AD4 	96cf17bf589fcbfa6f8de2dc84f19fa2
+		STBIOS.bin 		Sufami Turbo (Japan)	Required 	9b4ca911	d3a44ba7d42a74d3ac58cb9c14c6a5ca
+		BS-X.bin 		English - DRM 			Optional	8ECC1963 	9c72de0cf4c9c88003292a79ddd0144d
+		BS-X.bin 		Japan - No DRM 			Optional	B6BFB9B9 	d5af0ab2545c053b90ffa0866074ecf1
+		BS-X.bin 		Japan - DRM 			Optional	F51F07A0 	fed4d8242cfbed61343d53d48432aced 	-->
+ 
+	<name> 		gambatte_libretro
+	<extension> .gb .zip
+	<command> 	retroarch -f -L ~/.config/retroarch/cores/gambatte_libretro.so %ROM%
+
+		<!-- lr-gambatte can load external BIOS for Game Boy (gb_bios.bin). Place these BIOS in ~/.config/retroarch/system/.
+
+		Filename 		Description 				md5sum 								CRC32
+		gb_bios.bin 	Game Boy BIOS - Optional 	32fbbd84168d3482956eb3c5051637f5 	59C8598E -->
+ 
+	<name> 		gambatte_libretro
+	<extension> .gbc .zip
+	<command> 	retroarch -f -L ~/.config/retroarch/cores/gambatte_libretro.so %ROM%
+
+		<!-- lr-gambatte can load external BIOS for Game Boy Color (gbc_bios.bin). Place these BIOS in ~/.config/retroarch/system/.
+
+		Filename 		Description 					md5sum 								CRC32
+		gbc_bios.bin 	Game Boy Color BIOS - Optional 	dbfce9db9deaa2567f6a84fde55f9680 	41884E46 -->
+
+	<name> 		sameboy_libretro
+	<extension> .gb .zip</extension>
+	<command> 	retroarch -f -L ~/.config/retroarch/cores/sameboy_libretro.so %ROM%
+
+		<!-- lr-sameboy can load external BIOS for Game Boy (dmg_boot.bin). Place these BIOS in ~/.config/retroarch/system/.
+
+		Filename 		Description 					md5sum 								CRC32
+		dmg_boot.bin 	Game Boy boot ROM - Optional 	32fbbd84168d3482956eb3c5051637f5 	59c8598e -->
+ 
+	<name> 		sameboy_libretro
+	<extension> .gbc .zip
+	<command> 	retroarch -f -L ~/.config/retroarch/cores/sameboy_libretro.so %ROM%
+ 
+ 		<!-- lr-sameboy can load external BIOS for Game Boy (cgb_boot.bin). Place these BIOS in ~/.config/retroarch/system/.
+
+		Filename 		Description 						md5sum 								CRC32
+		cgb_boot.bin 	Game Boy Color boot ROM - Optional 	dbfce9db9deaa2567f6a84fde55f9680 	41884e46 -->
